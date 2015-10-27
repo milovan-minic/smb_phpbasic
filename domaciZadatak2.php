@@ -44,14 +44,14 @@ echo "<br />";
 echo "<hr />";
 
 echo "Uporedjivanjem clanova niza<br />";
-$y = array(1, 80, 2, 6, 8, 4, 3, 8, 9);
+$y = array(80, 2, 399, 8, 4, 3, 8, 9);
 $max = $y[0];
 $min = $y[0];
 for($i = 0; $i < count($y); $i++){
     if($max < $y[$i]){
         $max = $y[$i];
     }
-    if($min > $y[0]){
+    if($min > $y[$i]){
         $min = $y[$i];
     }
 }
