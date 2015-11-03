@@ -54,7 +54,16 @@ foreach($samoglasnici as $samoglasnik){
     $finalNiz["$samoglasnik"] = $broj;
 }
 
-print_r($finalNiz);
+ksort($finalNiz);
 
-// doraditi sortiranje i prikaz
+foreach($finalNiz as $samoglasnik => $brojPonavljanja){
+    echo $samoglasnik . " => " . $brojPonavljanja . "<br />";
+}
 
+echo "<hr>";
+
+asort($finalNiz);
+
+foreach($finalNiz as $samoglasnik => $brojPonavljanja){
+    echo $samoglasnik . " => " . $brojPonavljanja . "<br />";
+}
