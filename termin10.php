@@ -35,11 +35,22 @@ $result = mysql_query($query);
 //    echo "$id | $n | $o";
 //}
 //
-for($i=0; $i<mysql_num_rows($result); $i++){
-    for($j=0; $j<mysql_num_fields($result); $j++){
-        $polje = mysql_result($result, $i, $j);
-        echo $polje . " | ";
-    }
-    echo "<br />";
+//for($i=0; $i<mysql_num_rows($result); $i++){
+//    for($j=0; $j<mysql_num_fields($result); $j++){
+//        $polje = mysql_result($result, $i, $j);
+//        echo $polje . " | ";
+//    }
+//    echo "<br />";
+//}
+
+//while ($red = mysql_fetch_array($result)){
+////    echo $red['idK'] . ' | ' . $red['Naslov'] . ' | ' . $red['Oblast'] . '<br />';
+//    echo $red[0] . ' | ' . $red[1] . ' | ' . $red[2] . '<br />';
+//}
+//mysql_free_result($result);
+
+while ($red = mysql_fetch_assoc($result)){
+    echo $red['idK'] . ' | ' . $red['Naslov'] . ' | ' . $red['Oblast'] . '<br />';
 }
+mysql_free_result($result);
 
